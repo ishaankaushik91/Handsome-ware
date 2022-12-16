@@ -1,0 +1,16 @@
+{
+  "name": "serialkiller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "bin": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@667/ps-list": "^1.1.2"
+  }
+}
