@@ -1,0 +1,16 @@
+{
+  "name": "decrypt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "decrypt.js",
+  "scripts": {
+    "test": "node decrypt.js"
+  },
+  "bin": "decrypt.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "folder-encrypt": "^1.1.7"
+  }
+}

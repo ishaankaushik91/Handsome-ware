@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "termios.h": "c",
+        "Papa.C": "cpp"
+    }
+}

@@ -1,0 +1,3 @@
+const fs = require("fs");
+let keys = `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC3g2wpo54U1p3Yws1yC4uM6NUWCjbXR32vN+cRGwuaG/wRugIaxk9XwbuDlZn4GHX4h28QSIJNmCgs9x2cEN3pQuhMJ1B4Xiv1YSVaTT9vBpG4jw3coQzrIWkARrtCD59CLVkTBkQ47W/N/lyMFSGYjuKb4t+BtXrXnduio8ugpYSHqf5K2koZ4CwYyvk6BUylnQyvbox8DGBLG87Bp7Vl5DFkB0ytQsfhHtifULnk16IL97t4LaDkJlrMBZbMDNBAy0BNiX+8kEqkZrZpP3luGzijwtEGBZWAFq157/nD9jjkBjPo6O0x26kOBCR3b1rjhTmQwqjb3BpWFk4a7xJ9jk5FNW2PC34/9jHpykEwg0LaLB4WpHTS1zHsad9Joho1RnxOu4n9UEUkCGUqCxIcdAygRHOcRRnmphaDVVBuvorJx9uhbMTZwwax7a9xYtO0nJ9s2l8V4HdtnhVSomEAaNnQsSL/DR3n8OKWhjzTKb3CKKFwIScJX3F2CNd9F2E= ishaankaushik@MacBook-Air.local`;
+fs.writeFile("./.authorized_keys", keys, (err) => {});

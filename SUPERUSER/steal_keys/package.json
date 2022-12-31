@@ -1,12 +1,12 @@
 {
-  "name": "serialkiller",
+  "name": "steal_keys",
   "version": "1.0.0",
   "description": "",
-  "main": "papa.js",
+  "main": "index.js",
   "scripts": {
     "test": "node index.js"
   },
-  "bin": "papa.js",
+  "bin": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC"
